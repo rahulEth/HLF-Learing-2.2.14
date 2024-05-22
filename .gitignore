@@ -12,3 +12,25 @@ organizations/peerOrganizations/*
 system-genesis-block/*
 *.tar.gz
 log.txt
+
+orderer/organizations/*
+# orderer/configtx/*
+orderer/channel-artifacts/*
+orderer/genesis.block
+
+
+org1/organizations/*
+org1/mychannel.block
+org1/mychannel.tx
+org1/Org1MSPanchors.tx
+org1/fabcargo.tar.gz
+org1/log.txt
+
+org2/organizations/*
+org2/mychannel.block
+org2/mychannel.tx
+org2/Org2MSPanchors.tx
+org2/fabcargo.tar.gz
+org2/log.txt
+
+
