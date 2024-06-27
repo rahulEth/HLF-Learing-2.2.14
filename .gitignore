@@ -32,6 +32,11 @@ org1/sys_config*
 org1/modified_config*
 org1/config*
 org1/org3.json
+org1/addPeer/peerOrganizations/*
+org1/addPeer/log.txt
+org1/addPeer/mychannel*
+org1/addPeer/fabcargo.tar.gz
+
 
 
 org2/organizations/*
@@ -70,6 +75,9 @@ addOrgToExistingChannel/log.txt
 addOrgToExistingChannel/logPeer1.txt
 addOrgToExistingChannel/org4.json
 addOrgToExistingChannel/mychannel*
+
+
+
 
 
 
