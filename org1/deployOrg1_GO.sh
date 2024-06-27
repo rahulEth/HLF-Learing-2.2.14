@@ -132,23 +132,23 @@ readTransaction() {
 }
 
 lifecycleCommands() {
-  packageChaincode
-  sleep 2
-  installChaincode
-  sleep 2
-  queryInstalled
-  sleep 2
-  approveForMyOrg1
-  sleep 2
-  getblock
-  checkCommitReadyness
-  sleep 2
+  # packageChaincode
+  # sleep 2
+  # installChaincode
+  # sleep 2
+  # queryInstalled
+  # sleep 2
+  # approveForMyOrg1
+  # sleep 2
+  # getblock
+  # checkCommitReadyness
+  # sleep 2
   commitChaincodeDefination
-  sleep 2
-  queryCommitted
-  sleep 2
-  chaincodeInvokeInit
-  sleep 10
+  # sleep 2
+  # queryCommitted
+  # sleep 2
+  # chaincodeInvokeInit
+  # sleep 10
 }
 getInstallChaincodes() {
 

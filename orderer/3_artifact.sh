@@ -29,7 +29,10 @@ sleep 2
 # echo "#######    Generating anchor peer update for Org2MSP  ##########"
 # configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ../org2/Org2MSPanchors.tx -channelID $CHANNEL_NAME -asOrg Org2MSP
 
-sleep 2
-docker-compose -f docker-compose-orderer.yaml up -d
-sleep 10
-docker ps -a    
+# sleep 2
+# docker-compose -f docker-compose-orderer.yaml up -d
+# sleep 10
+# docker ps -a    
+
+
+

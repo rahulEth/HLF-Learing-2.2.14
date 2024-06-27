@@ -54,4 +54,7 @@ readTransaction(){
 }
 
 
-installChaincodePeer1Org1
+# installChaincodePeer1Org1
+
+
+readTransaction

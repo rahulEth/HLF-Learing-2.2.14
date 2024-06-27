@@ -38,6 +38,7 @@ services:
       - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.org2.example.com:9051
       - CORE_PEER_LOCALMSPID=Org2MSP
       - CORE_OPERATIONS_LISTENADDRESS=peer0.org2.example.com:9446
+      - CORE_METRICS_PROVIDER=prometheus
       - ORDERER_CA=/etc/hyperledger/fabric/tlscacerts/tlsca.example.com-cert.pem
     volumes:
         - /var/run/docker.sock:/host/var/run/docker.sock
@@ -77,6 +78,7 @@ services:
       - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.org2.example.com:10051
       - CORE_PEER_LOCALMSPID=Org2MSP
       - CORE_OPERATIONS_LISTENADDRESS=peer1.org2.example.com:9447
+      - CORE_METRICS_PROVIDER=prometheus
       - ORDERER_CA=/etc/hyperledger/fabric/tlscacerts/tlsca.example.com-cert.pem
     volumes:
         - /var/run/docker.sock:/host/var/run/docker.sock

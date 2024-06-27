@@ -25,6 +25,14 @@ org1/mychannel.tx
 org1/Org1MSPanchors.tx
 org1/fabcargo.tar.gz
 org1/log.txt
+org1/mychannel*
+org1/config_update*
+org1/mychannel2*
+org1/sys_config*
+org1/modified_config*
+org1/config*
+org1/org3.json
+
 
 org2/organizations/*
 org2/mychannel.block
@@ -32,5 +40,42 @@ org2/mychannel.tx
 org2/Org2MSPanchors.tx
 org2/fabcargo.tar.gz
 org2/log.txt
+org2/mychannel*
+org2/config_update*
+org2/mychannel2*
+org2/sys_config*
+org2/modified_config*
+org2/config_update_in_envelope.pb
+
+
+
+addOrgConsortium/organizations/*
+addOrgConsortium/mychannel.block
+addOrgConsortium/mychannel.tx
+addOrgConsortium/Org2MSPanchors.tx
+addOrgConsortium/fabcargo.tar.gz
+addOrgConsortium/log.txt
+addOrgConsortium/logPeer1.txt
+addOrgConsortium/org3.json
+addOrgConsortium/mychannel*
+addOrgConsortium/config_update*
+addOrgConsortium/mychannel2*
+addOrgConsortium/sys_config*
+addOrgConsortium/modified_config*
+
+addOrgToExistingChannel/organizations/*
+addOrgToExistingChannel/mychannel.block
+addOrgToExistingChannel/fabcargo.tar.gz
+addOrgToExistingChannel/log.txt
+addOrgToExistingChannel/logPeer1.txt
+addOrgToExistingChannel/org4.json
+addOrgToExistingChannel/mychannel*
+
+
+
+
+
+
+
 
 

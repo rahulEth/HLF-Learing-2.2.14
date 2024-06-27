@@ -1,12 +1,12 @@
 #!/bin/bash
-cp ../orderer/channel-artifacts/mychannel.tx .
-cp -r ../orderer/organizations/ordererOrganizations ./organizations
+# cp ../orderer/channel-artifacts/mychannel.tx .
+# cp -r ../orderer/organizations/ordererOrganizations ./organizations
 sleep 1
 export PATH=${PWD}/../bin:$PATH
 export FABRIC_CFG_PATH=${PWD}/../config
 export VERBOSE=false
 export CORE_PEER_TLS_ENABLED=true
-export CHANNEL_NAME='mychannel'
+export CHANNEL_NAME='mychannel2'
 
 
 export ORDERER_CA=${PWD}/../orderer/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
@@ -40,7 +40,8 @@ createChannel() {
 fetchChannelBlock() {
     export FABRIC_CFG_PATH=${PWD}/../config
     getGlobalPeer0Org1
-    peer channel fetch 0 $CHANNEL_NAME.block -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME --tls --cafile $ORDERER_CA
+    # peer channel fetch 0 $CHANNEL_NAME.block -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME --tls --cafile $ORDERER_CA
+    # configtxlator proto_decode --input ${CHANNEL_NAME}.block --type common.Block | jq .data.data[0].payload.data.config > mychannel2.json
 }
 
 # joinChannel ORG
@@ -70,7 +71,7 @@ echo "Creating channel ${CHANNEL_NAME}"
 sleep 2
 
 echo "featching channel ${CHANNEL_NAME} block"
-fetchChannelBlock
+# fetchChannelBlock
 sleep 2
 ## Join all the peers to the channel
 echo "Joining org1 peer to the channel..."
@@ -79,6 +80,6 @@ echo "Joining org1 peer to the channel..."
 sleep 2
 ## Set the anchor peers for each org in the channel
 echo "Setting anchor peer for org1..."
-setAnchorPeer 
+# setAnchorPeer 
 
 echo "Channel '$CHANNEL_NAME' joined"

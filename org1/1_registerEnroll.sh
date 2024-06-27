@@ -58,9 +58,10 @@ registerPeersAdminUsers(){
 
 }
 
+# setupOrg1CA
+# sleep 5
+# nodeOU
+# sleep 2
+# registerPeersAdminUsers
 
-setupOrg1CA
-sleep 5
-nodeOU
-sleep 2
-registerPeersAdminUsers
+#NOTE: while rregistting extra user(orderer, peer, user,node), do not forget to   export FABRIC_CA_CLIENT_HOME=${PWD}/organizations/peerOrganizations/org1.example.com

@@ -192,6 +192,117 @@ curl http://127.0.0.1:9443/healthz
 
 
 
+## Node OU
+allow role-based identity managment within the network. Node OU help in categorizing and validating the roles of different nodes(client, peer, orderer, admin)
+
+an certificate container Node OU with value peer ,would be idetified as peer .
+It distinguish and enforce role and permissions based of the type of node. It also allow to enfore policy based on the roles.
+
+* Hyperledger Fabric will correctly identify the node as a peer based on the PeerOUIdentifie
+
+
+## practical Implications of NODE OU
+
+Access Control: Node OUs help in defininig access control policies that are specific to clients, peers, orderers, admins
+
+Role Management: simplifies the managment of different roles within network by validating the certificates to determine the node type
+
+Policy Enforcement: ensure only node with correct OU identifiers can perform certain actions , thereby enhainicng security and role segregation.
+
+
+
+## Updating an endorsement policy
+
+same chaincode can be used to update the endorsment policy without repackgeing and reinstalling the chaincode. all channel member can endorse a transaction (approvemyorg transaction with new endorsment policy) by increasisng the sequence number by one and no need to update the chaincode version. after that one of the org can commit the same chaicnde with new endorsment policy
+
+
+## MSP
+
+msp turn certificate provided by PKI to idnetity, MSP also have CA certiface (along with issued identtity into users directory of msp) who is 
+allowed to issue the certificates. beyond that MSP turn identity into role,there are different type of role like admin, peer, orderer , client,member . msp identify  actor have which previleged on peer or channel.   
+
+## MSP domains
+
+MSPs occur in two domains in the blockchain network
+
+1. locally on actor's node (local MSP)
+2. In channel configration (channel MSP)
+
+## local MSPs
+local MSPs are defined for clients and for the nodes(peer and orderer)
+every node must have local MSP defieds, as it defines who has administratvive or participatry rights.  like  peers admin will not necessary be channel admins, and vice versa.
+
+## CHannel MSPs
+
+channel MSPs defines administractive and participatory rights at the channel level.
+
+Channel MSPs identify who has authorities at a channel level. chnnel level MSPs defined the relatioship bitwwen channel level member identiity and enforsment of level level polocies.
+
+NOTE: Every organization participating in a channel must have an MSP defined for it.
+NOTE: The system channel MSP includes the MSPs of all the organizations that participate in an ordering service. 
+NOTE: Local MSPs are only defined on the file system of the node or user 
+NOTE: MSP allows an idnetity to be linked to an organization, 
+NOTE: a channel MSP also have additional folder of Revoked Certificates.
+
+## NodeOUs
+it provide a way to clasifiy identities in a digital certificate hierarchy.
+ For instance, an organization having specific NodeOUs enabled could require that a ‘peer’ sign for it to be a valid endorsement.
+
+
+ ## different role under any organization
+
+ <OrgMSPName><ROLE>
+ Org1MSP.Admin
+ Org1MSP.Peer
+ Org1MSP.Client : (application that interact with network on user behalf, that is how end user access the application)
+ Org1MSP.Member:  this refert to the any member of the orgs including peers, admins, clients , more general policy can be defined as MSP.Member
+
+
+## different type of peers
+
+endorsment peer:
+commititing peer:
+leader peer: get the block from orderer and shared it with other peers of same orgnixation, we can defined it as static or dynamic. can be set zero or more than one.
+anchor peer: for communication accross the orgs, you can define zero ore more than one anchor peer.
+
+![alt text](image.png)
+
+
+## Channel capabilities
+
+capablities which are defined in the configration of each channel, ensure determinisum by defining a level at which behaviours produce same result.
+NOTE: Capabilities enable nodes running at different version levels to behave in a compatible and consistent way given the channel configuration at a specific block height 
+
+## communication protocol
+
+1. gRPC: for peer, orderer, client interaction
+2. gossip protocol: for peer discovery, data dissemination, and maintaining ledger consistency.
+
+3. HTTP/2 and TLS: For secure and efficient data transport.
+
+4. REST APIs:  For client interaction and administrative operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

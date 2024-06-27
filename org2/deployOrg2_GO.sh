@@ -102,9 +102,9 @@ getInstallChaincodes() {
 
 }
 # preSetupGO
-chaincodeInfo
-setGlobalsForPeer0Org2
-lifecycleCommands
-insertTransaction
-readTransaction
-getInstallChaincodes
+# chaincodeInfo
+# setGlobalsForPeer0Org2
+# lifecycleCommands
+# insertTransaction
+# readTransaction
+# getInstallChaincodes
